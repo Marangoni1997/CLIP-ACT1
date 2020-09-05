@@ -11,7 +11,7 @@ body{
 /*NAVIGATION*/
 
 .navbar-brand img {
-    height: 3rem;
+    height: 2rem;
 }
 
 .navbar {
@@ -23,7 +23,7 @@ body{
 }
 
 .nav-item {
-    padding: .5rem;
+    padding: .8rem;
 }
 
 .nav-link {

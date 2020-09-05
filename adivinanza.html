@@ -12,29 +12,29 @@
     <!-- Font Google-->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">  </head>
   <body>
-    <!-- Nav -->
-    <nav class="navbar bg-gray navbar-light navbar-expand-lg">
-      <div class="container">
-
-        <a href="index.html" class="navbar-brand"><img src="img/firefox-icon.png" alt="Logo" title="Logo">Firefox</a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a href="index.html" class="nav-link active">Inicio</a></li>
-            <li class="nav-item"><a href="#mozilla" class="nav-link">Mozilla</a></li>
-            <li class="nav-item"><a href="#Info" class="nav-link">Wiki</a></li>
-            <li class="nav-item"><a href="adivinanza.html" class="nav-link">Adivinanza</a></li>
-            <li class="nav-item"><a href="#formulario" class="nav-link">Mas</a></li>
-          </ul>
-
+      <!-- Nav-->
+      <nav class="navbar bg-gray navbar-light navbar-expand-lg">
+        <div class="container">
+  
+          <a href="index.html" class="navbar-brand"><img src="img/firefox-icon.png" alt="Logo" title="Logo">Firefox</a>
+  
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a href="index.html" class="nav-link active">Inicio</a></li>
+              <li class="nav-item"><a href="#mozilla" class="nav-link">Mozilla</a></li>
+              <li class="nav-item"><a href="#tabla" class="nav-link">Wiki</a></li>
+              <li class="nav-item"><a href="adivinanza.html" class="nav-link">Adivinanza</a></li>
+              <li class="nav-item"><a href="#consultas" class="nav-link">Consultas</a></li>
+            </ul>
+  
+          </div>
+  
         </div>
-
-      </div>
-    </nav>
+      </nav>
 <!-- box adivinanza -->
     <div class="container text-center  align-self-center" id="boxAdivinanza" >
         <h1>Adivinanza</h1>
@@ -56,6 +56,34 @@
 
     <!-- script -->
     <script src="adivinanza.js"></script>
+
+    <script>
+
+    let contador = 0;
+    function Adivina() {
+
+        var resp = document.getElementById("texto1").value;
+       
+        if (resp == "blanco") {
+            document.getElementById("BoxRespuesta").innerHTML="GANASTE!!";
+            }
+        else{
+            contador++;
+            document.getElementById("BoxRespuesta").innerHTML="Respuesta Equivocada";
+        }
+        if(resp != "blanco" && contador == 2){
+            document.getElementById("BoxRespuesta").innerHTML="Es un color claro, te quedan 2 intentos.";
+        }
+        if (resp != "blanco" && contador == 3) {
+            document.getElementById("BoxRespuesta").innerHTML="Lo contrario a negro, te queda 1 intento.";
+        }
+        if (resp != "blanco" && contador == 4) {
+            document.getElementById("BoxRespuesta").innerHTML="Perdiste, vuelve a intentarlo.";  
+            contador = 0;
+        }
+        
+    }
+    </script>
 
     <div class="container py-2 my-2"></div>
 
